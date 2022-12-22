@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test(){
+            var vall=document.kirim.T1.value
+            if(vall<=40){
+                document.kirim.T2.value="E";
+            }else if(vall<=55){
+                document.kirim.T2.value="D";
+            }else if(vall<=60){
+                document.kirim.T2.value="C";
+            }else if(vall<=65){
+                document.kirim.T2.value="BC";
+            }else if(vall<=70){
+                document.kirim.T2.value="B";
+            }else if(vall<=80){
+                document.kirim.T2.value="AB";
+            }else if(vall<=100){
+                document.kirim.T2.value="A";
+            }
+        }
+    </script>
+    <form method="POST" name="kirim">
+        <p>Input Nilai Anda <input type="text" name="T1" size="20"> Nilai Anda <input type="text" name="T2" size="20" disabled></p>
+        <p><input type="button" value="Konversi" name="B1" onclick="test()"></p>
+    </form>
+</body>
+</html>
